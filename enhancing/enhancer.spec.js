@@ -8,6 +8,14 @@ describe('Item modification functions.', () => {
       durability: 40,
       enhancement: 1,
     };
+    it('Should return undefined if passed an argument that is not a JS object', () => {
+      expect(repair(3)).toBe(undefined);
+      expect(repair('Hello')).toBe(undefined);
+      expect(repair(true)).toBe(undefined);
+      expect(repair(NaN)).toBe(undefined);
+      expect(repair(null)).toBe(undefined);
+      expect(repair([1, 2, 3])).toBe(undefined);
+    });
     it('Should return an object', () => {
       expect(typeof repair(testWeapon)).toBe('object');
     });
@@ -29,6 +37,14 @@ describe('Item modification functions.', () => {
       durability: 90,
       enhancement: 20,
     };
+    it('Should return undefined if passed an argument that is not a JS object', () => {
+      expect(succeed(3)).toBe(undefined);
+      expect(succeed('Hello')).toBe(undefined);
+      expect(succeed(true)).toBe(undefined);
+      expect(succeed(NaN)).toBe(undefined);
+      expect(succeed(null)).toBe(undefined);
+      expect(succeed([1, 2, 3])).toBe(undefined);
+    });
     it('Should return an object', () => {
       expect(typeof succeed(highLevelWeapon)).toBe('object');
     });
@@ -56,6 +72,14 @@ describe('Item modification functions.', () => {
       durability: 90,
       enhancement: 20,
     };
+    it('Should return undefined if passed an argument that is not a JS object', () => {
+      expect(fail(3)).toBe(undefined);
+      expect(fail('Hello')).toBe(undefined);
+      expect(fail(true)).toBe(undefined);
+      expect(fail(NaN)).toBe(undefined);
+      expect(fail(null)).toBe(undefined);
+      expect(fail([1, 2, 3])).toBe(undefined);
+    });
     it('Should return an object', () => {
       expect(typeof fail(highLevelWeapon)).toBe('object');
     });
@@ -86,6 +110,14 @@ describe('Item modification functions.', () => {
       durability: 90,
       enhancement: 14,
     };
+    it('Should return undefined if passed an argument that is not a JS object', () => {
+      expect(get(3)).toBe(undefined);
+      expect(get('Hello')).toBe(undefined);
+      expect(get(true)).toBe(undefined);
+      expect(get(NaN)).toBe(undefined);
+      expect(get(null)).toBe(undefined);
+      expect(get([1, 2, 3])).toBe(undefined);
+    });
     it('Should return an object', () => {
       expect(typeof get(lowLevelWeapon)).toBe('object');
     });
